@@ -1,0 +1,4 @@
+FROM scratch
+EXPOSE 8080
+ENTRYPOINT ["/go-demo-1571047433"]
+COPY ./bin/ /
