@@ -1,0 +1,139 @@
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-5624n[0m
+{"level":"warn","ts":1571049029.8715475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571049029.8720336,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-w878r[0m
+{"level":"warn","ts":1571049030.8107035,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571049030.8122492,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-dcanadillas-kube-go-demo-1-tpnnl[0m
+{"level":"warn","ts":1571049035.8781602,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571049036.9473448,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********-kube/go-demo-1571047433.git @ 8555a72cdcdda363efe39a052687fcff6e3897b9 in path /workspace/source"}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8555a72cdcdda363efe39a052687fcff6e3897b9,1:2fef019449f13229ee0d8eb01971f76c5121e2ac
+DEBUG: ran git fetch --unshallow origin 2fef019449f13229ee0d8eb01971f76c5121e2ac: 8555a72cdcdda363efe39a052687fcff6e3897b9: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 8555a72cdcdda363efe39a052687fcff6e3897b9 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 2fef019449f13229ee0d8eb01971f76c5121e2ac in 
+Merged SHA 2fef019449f13229ee0d8eb01971f76c5121e2ac with commit message 'new message' into base branch master
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 2fef019449f13229ee0d8eb01971f76c5121e2ac: 8555a72cdcdda363efe39a052687fcff6e3897b9: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 8555a72cdcdda363efe39a052687fcff6e3897b9 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 2fef019449f13229ee0d8eb01971f76c5121e2ac in 
+Merged SHA 2fef019449f13229ee0d8eb01971f76c5121e2ac with commit message 'new message' into base branch master
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for ***********-kube-go-demo-1571047433-PR-1-1
+Applying changes 
+upserted PipelineResource ***********-kube-go-demo-157104 for the git repository https://github.com/***********-kube/go-demo-1571047433.git
+upserted Task ***********-kube-go-demo-157104-4jwkw-from-build-pack-1
+upserted Pipeline ***********-kube-go-demo-157104-4jwkw-1
+created PipelineRun ***********-kube-go-demo-157104-4jwkw-1
+created PipelineStructure ***********-kube-go-demo-157104-4jwkw-1
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5wjd2[0m
+{"level":"warn","ts":1571049046.8407338,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571049046.8413978,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mrbk8[0m
+{"level":"warn","ts":1571049047.7242796,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571049047.725955,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/preview\""}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dcanadillas-kube-go-demo-157104-zjwpq[0m
+{"level":"warn","ts":1571049054.8374639,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571049055.9153523,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********-kube/go-demo-1571047433.git @ master in path /workspace/source"}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8555a72cdcdda363efe39a052687fcff6e3897b9,1:2fef019449f13229ee0d8eb01971f76c5121e2ac
+DEBUG: ran git fetch --unshallow origin 2fef019449f13229ee0d8eb01971f76c5121e2ac: 8555a72cdcdda363efe39a052687fcff6e3897b9: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 8555a72cdcdda363efe39a052687fcff6e3897b9 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 2fef019449f13229ee0d8eb01971f76c5121e2ac in 
+Merged SHA 2fef019449f13229ee0d8eb01971f76c5121e2ac with commit message 'new message' into base branch master
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-demo-1571047433 main.go
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/go-demo-1571047433"]           
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/10/14 10:31:29 pushed blob: sha256:8c1e2c242be4469d6b66f033268bded371c6c3b3eaf9e2aac3a983ad838a938b
+2019/10/14 10:31:30 pushed blob: sha256:e0f4b6ef65b603109839f3f1021cf1fd27b6e64da04ccbce3224c3b1cf380d48
+2019/10/14 10:31:32 gcr.io/emea-sa-demo/go-demo-1571047433:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:007873c1c89b77dceea61756c4e9e51081d07194c4fe8df46eeb8da654eac3e3 size: 428
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/emea-sa-demo\/go-demo-1571047433|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-4jwkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Commit author email is empty for: 2fef019449f13229ee0d8eb01971f76c5121e2ac
+Looking for commits in: /workspace/source/
+Found commit author match for: *********** with email address: ***********@cloudbees.com
+Created environment ***********-kube-go-demo-1571047433-pr-1
+Namespace **-***********-kube-go-demo-1571047433-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.205.231.223.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/emea-sa-demo/go-demo-1571047433
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities ***********-kube-go-demo-1571047433-pr-1-1 which has status Running
+WARNING: preview application http://go-demo-1571047433.**-***********-kube-go-demo-1571047433-pr-1.35.205.231.223.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.252573036s
+WARNING: preview application http://go-demo-1571047433.**-***********-kube-go-demo-1571047433-pr-1.35.205.231.223.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.795078749s
+Preview application is now available at: http://go-demo-1571047433.**-***********-kube-go-demo-1571047433-pr-1.35.205.231.223.nip.io
