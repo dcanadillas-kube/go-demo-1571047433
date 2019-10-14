@@ -1,0 +1,115 @@
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-kk5wz[0m
+{"level":"warn","ts":1571047555.1377528,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571047555.1383417,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-vrv8m[0m
+{"level":"warn","ts":1571047639.229828,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571047639.231617,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-dcanadillas-kube-go-demo-1-xd5fg[0m
+{"level":"warn","ts":1571047721.9090886,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571047723.0710282,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********-kube/go-demo-1571047433.git @ 8555a72cdcdda363efe39a052687fcff6e3897b9 in path /workspace/source"}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8555a72cdcdda363efe39a052687fcff6e3897b9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/go-demo-1571047433/Chart.yaml to 0.0.1
+Updating repository in charts/go-demo-1571047433/values.yaml to gcr.io/emea-sa-demo/go-demo-1571047433
+Updating tag in charts/go-demo-1571047433/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+PipelineActivity for ***********-kube-go-demo-1571047433-master-1
+Applying changes 
+upserted PipelineResource ***********-kube-go-demo-157104 for the git repository https://github.com/***********-kube/go-demo-1571047433.git
+upserted Task ***********-kube-go-demo-157104-from-build-pack-1
+upserted Pipeline ***********-kube-go-demo-157104-1
+created PipelineRun ***********-kube-go-demo-157104-1
+created PipelineStructure ***********-kube-go-demo-157104-1
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jcnzh[0m
+{"level":"warn","ts":1571047738.8821087,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571047738.8826737,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k8gdp[0m
+{"level":"warn","ts":1571047741.3777199,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571047741.381047,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/go-demo-1571047433\""}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-dcanadillas-kube-go-demo-157104-9vpgx[0m
+{"level":"warn","ts":1571047811.5276022,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571047812.6526167,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********-kube/go-demo-1571047433.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8555a72cdcdda363efe39a052687fcff6e3897b9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-demo-1571047433 main.go
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/go-demo-1571047433"]           
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/10/14 10:10:43 pushed blob: sha256:3f3c936d97d28221cc8d7745a4fec9a0408ee51d3275560df475e7e0b30e4319
+2019/10/14 10:10:43 pushed blob: sha256:bad0b22506a632727b7a89b1aa4d8fe4c0b6b6686ad19df48c0df5debf4c416c
+2019/10/14 10:10:45 gcr.io/emea-sa-demo/go-demo-1571047433:0.0.1: digest: sha256:2d48ae458dd7a9c9bdd6a040ea891b979ab2dca1f4ca608d2c199101f193a84b size: 428
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/go-demo-1571047433 to an unshallow repository
+no previous commit version found so change diff unavailable
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file go-demo-1571047433-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mdcanadillas-kube-go-demo-157104-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app go-demo-1571047433 version 0.0.1 to namespace **-staging
+WARNING: Waiting for the fork of ***********/environment-***********-cloudbees-f5-staging to appear...
+Forked Git repository to https://github.com/***********/environment-***********-cloudbees-f5-staging
+Created Pull Request: https://github.com/***********-kube/environment-***********-cloudbees-f5-staging/pull/1
+WARNING: Failed to query the Pull Request last commit status for https://github.com/***********-kube/environment-***********-cloudbees-f5-staging/pull/1 ref 9e4585bf58d76c7d0652ba4272a1d1873406a2e8 Could not find a status for repository ***********-kube/environment-***********-cloudbees-f5-staging with ref 9e4585bf58d76c7d0652ba4272a1d1873406a2e8
+Pull Request https://github.com/***********-kube/environment-***********-cloudbees-f5-staging/pull/1 is merged at sha 721cbf3ceead3db8ac316368be51ccc12233f899
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names go-demo-1571047433, **-go-demo-1571047433, **-staging-go-demo-1571047433
